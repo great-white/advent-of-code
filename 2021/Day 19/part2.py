@@ -86,7 +86,6 @@ def solve(filename):
             if scannerPos is None:
                 continue
             scanners[i] = scannerPos
-            print('here')
             queue.append(i)
 
     ans = 0
