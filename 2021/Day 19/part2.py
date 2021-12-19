@@ -41,7 +41,7 @@ def updateBeacons(idx: int,
                                 count += (bbx, bby, bbz) in finalBeacons[idx]
 
                             if count >= 12:
-                                # Alas, I found the scanner position
+                                # Finally, I found the scanner position
                                 finalBeacons[curIdx] = curBeacons
                                 return (sx, sy, sz)
 
@@ -86,6 +86,7 @@ def solve(filename):
             if scannerPos is None:
                 continue
             scanners[i] = scannerPos
+            print('here')
             queue.append(i)
 
     ans = 0
