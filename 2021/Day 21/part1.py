@@ -1,5 +1,5 @@
 from typing import List
-from parse import compile, parse
+from parse import parse
 
 
 YEAR = 2021

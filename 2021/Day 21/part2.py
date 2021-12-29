@@ -1,6 +1,6 @@
 from typing import List
 from functools import lru_cache
-from parse import compile, parse
+from parse import parse
 
 
 YEAR = 2021
