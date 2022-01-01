@@ -4,7 +4,7 @@ from collections import defaultdict
 
 YEAR = 2021
 DAY = 'Day 22'
-FILE_NAMES = ['small-01', 'small-02', 'large']
+FILE_NAMES = ['part-01-small-01', 'part-01-small-02', 'large', ]
 
 
 def isValid(start: int, end: int) -> bool:
