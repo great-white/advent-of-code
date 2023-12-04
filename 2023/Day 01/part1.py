@@ -1,6 +1,8 @@
 import os
 
 FILE_NAMES = ['small', 'large']
+YEAR = 2023
+DAY = "Day 01"
 
 
 def find_first_digit(s):
@@ -14,7 +16,7 @@ def find_last_digit(s):
             return i
 
 def solve(filename):
-    INPUT_PATH = f'{os.getcwd()}/Input/{filename}.txt'
+    INPUT_PATH = f'{os.path.expanduser("~")}/GitHub Projects/advent-of-code/{YEAR}/{DAY}/Input/{filename}.txt'
     ar = []
     with open(INPUT_PATH, 'r') as _file:
         for line in _file:

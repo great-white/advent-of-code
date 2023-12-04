@@ -2,6 +2,8 @@ import os
 import re
 
 FILE_NAMES = ['small', 'large']
+YEAR = 2023
+DAY = "Day 02"
 VALID = {
     'red': 12,
     'green': 13,
@@ -24,7 +26,7 @@ def is_valid_game(game):
     return True
 
 def solve(filename):
-    INPUT_PATH = f'{os.getcwd()}/Input/{filename}.txt'
+    INPUT_PATH = f'{os.path.expanduser("~")}/GitHub Projects/advent-of-code/{YEAR}/{DAY}/Input/{filename}.txt'
     ar = []
     with open(INPUT_PATH, 'r') as _file:
         for line in _file:

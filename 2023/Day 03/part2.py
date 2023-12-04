@@ -2,6 +2,8 @@ import os
 from collections import defaultdict
 
 FILE_NAMES = ['small', 'large']
+YEAR = 2023
+DAY = "Day 03"
 symbolMap = defaultdict(list)
 
 
@@ -40,7 +42,7 @@ def find(ar):
                     symbolMap[symbol].append(int(cur))
 
 def solve(filename):
-    INPUT_PATH = f'{os.getcwd()}/Input/{filename}.txt'
+    INPUT_PATH = f'{os.path.expanduser("~")}/GitHub Projects/advent-of-code/{YEAR}/{DAY}/Input/{filename}.txt'
     ar = []
     with open(INPUT_PATH, 'r') as _file:
         for line in _file:
