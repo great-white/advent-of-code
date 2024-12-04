@@ -63,7 +63,7 @@ def solve(filename):
             k += 1
         ans += k == 4
 
-        # Going backward
+        # Going upward
         i, j = I, J
         k = 0
         while i >= 0 and k < 4:
