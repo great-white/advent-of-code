@@ -1,5 +1,4 @@
 import os
-import re
 
 FILE_NAMES = ['small', 'large']
 YEAR = 2024
