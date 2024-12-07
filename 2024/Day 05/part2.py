@@ -58,7 +58,7 @@ def solve(filename):
         If yes, return the middle page.
         '''
         expectedRow = getExpectedUpdate(row)
-        return row[len(row) // 2] if expectedRow == row else 0
+        return expectedRow[len(expectedRow) // 2] if expectedRow != row else 0
 
     ans = 0
     for item in ar:
