@@ -1,5 +1,6 @@
 import os
 import time
+from functools import cache
 
 FILE_NAMES = ['small', 'large']
 YEAR = 2024
@@ -13,23 +14,16 @@ def solve(filename):
             line = list(map(int, line.strip().split()))
             ar.append(line)
     
-    memo = dict()
-    
+    @cache
     def dfs(num, steps=0):
-        if (num, steps) in memo:
-            return memo[(num, steps)]
         if steps == 75:
-            memo[(num, steps)] = 1
             return 1
         if num == 0:
-            memo[(num, steps)] = dfs(num + 1, steps + 1)
-            return memo[(num, steps)]
+            return dfs(num + 1, steps + 1)
         if len(str(num)) % 2 == 0:
             mid = len(str(num)) // 2
-            memo[(num, steps)] = dfs(int(str(num)[:mid]), steps + 1) + dfs(int(str(num)[mid:]), steps + 1)
-            return memo[(num, steps)]
-        memo[(num, steps)] = dfs(num * 2024, steps + 1)
-        return memo[(num, steps)]
+            return dfs(int(str(num)[:mid]), steps + 1) + dfs(int(str(num)[mid:]), steps + 1)
+        return dfs(num * 2024, steps + 1)
     
     return sum([dfs(num) for num in ar[0]])
         
