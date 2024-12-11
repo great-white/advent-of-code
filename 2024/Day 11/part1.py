@@ -1,4 +1,5 @@
 import os
+import time
 
 FILE_NAMES = ['small', 'large']
 YEAR = 2024
@@ -35,4 +36,11 @@ def solve(filename):
     return len(ar)
         
 for name in FILE_NAMES:
-    print(name, solve(name))
+    # Start time
+    begin = time.time()
+    # Actual execution
+    ans = solve(name)
+    # End time
+    end = time.time()
+    # Output
+    print(name, solve(name), '\tTime', end - begin)
