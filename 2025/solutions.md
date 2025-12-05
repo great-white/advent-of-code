@@ -1,4 +1,4 @@
-# All solutions of 2024
+# All solutions of 2025
 
 ### Day 01
 
